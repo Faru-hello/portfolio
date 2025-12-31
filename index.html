@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fariha | Full Stack Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>Fariha.dev</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Hi, I'm <span>Fariha</span></h1>
+    <p>Data Scientist | Full Stack Developer | AI Researcher</p>
+    <button onclick="scrollToSection('projects')">View My Work</button>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I build intelligent, data-driven applications combining Machine Learning,
+        modern web technologies, and scalable system design.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Tech Stack</h2>
+    <div class="grid">
+        <div class="card">Frontend<br><span>HTML, CSS, JavaScript</span></div>
+        <div class="card">Backend<br><span>Python, Flask</span></div>
+        <div class="card">ML / AI<br><span>PyTorch, XAI</span></div>
+        <div class="card">Tools<br><span>Git, Docker, Streamlit</span></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div id="project-list"></div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="form-status"></p>
+</section>
+
+<footer>
+    <p>© 2025 Me Fariha | Built like a product 🚀</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
