@@ -38,7 +38,9 @@ Version Control: Git & GitHub
 
 📁 Project Structure
 portfolio/
+
 │
+
 ├── index.html
 
 ├── style.css
