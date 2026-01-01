@@ -40,9 +40,13 @@ Version Control: Git & GitHub
 portfolio/
 │
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 └── README.md
+
 Future Improvements
 
 1.Backend integration for contact form
