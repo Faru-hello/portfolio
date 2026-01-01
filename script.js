@@ -1,15 +1,19 @@
 const projects = [
     {
-        title: "Bone Fracture Classification",
-        desc: "Deep learning medical image classification with CNN models."
+        title: "Personal Portfolio Website",
+        desc: "Responsive portfolio website built using HTML, CSS, and JavaScript, deployed on Netlify to showcase skills, projects, and publications."
     },
     {
-        title: "Fake News Detection",
-        desc: "ML-based NLP system focusing on bias and adversarial robustness."
+        title: "University & Faculty Feedback System (In Progress)",
+        desc: "Full-stack web application under development to allow students to submit anonymous feedback and help authorities identify areas for improvement."
     },
     {
-        title: "Smart Attendance System",
-        desc: "Biometric attendance system using ML & image processing."
+        title: "Data Science Web App (Streamlit)",
+        desc: "Interactive Streamlit-based web application for data analysis and visualization, deployed online for demonstration purposes."
+    },
+    {
+        title: "Research Publication (IEEE Conference)",
+        desc: "Explainable Machine-Learning framework for predicting delivery delays and risk in smart supply chains, published in an IEEE international conference."
     }
 ];
 
@@ -29,5 +33,5 @@ function scrollToSection(id) {
 document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
     document.getElementById("form-status").innerText =
-        "Message sent successfully (backend simulated).";
+        "Message sent successfully. Thank you for reaching out!";
 });
