@@ -1,19 +1,15 @@
 const projects = [
     {
-        title: "Personal Portfolio Website",
-        desc: "Responsive portfolio website built using HTML, CSS, and JavaScript, deployed on Netlify to showcase skills, projects, and publications."
+        title: "Bone Fracture Classification",
+        desc: "Deep learning-based medical image classification using CNN architectures."
     },
     {
-        title: "University & Faculty Feedback System (In Progress)",
-        desc: "Full-stack web application under development to allow students to submit anonymous feedback and help authorities identify areas for improvement."
+        title: "Fake News Detection",
+        desc: "NLP system focusing on bias mitigation and adversarial robustness."
     },
     {
-        title: "Data Science Web App (Streamlit)",
-        desc: "Interactive Streamlit-based web application for data analysis and visualization, deployed online for demonstration purposes."
-    },
-    {
-        title: "Research Publication (IEEE Conference)",
-        desc: "Explainable Machine-Learning framework for predicting delivery delays and risk in smart supply chains, published in an IEEE international conference."
+        title: "Smart Attendance System",
+        desc: "Biometric attendance system using machine learning and image processing."
     }
 ];
 
@@ -30,8 +26,12 @@ function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
+
+document.getElementById("contact-form").addEventListener("submit", e => {
     e.preventDefault();
     document.getElementById("form-status").innerText =
-        "Message sent successfully. Thank you for reaching out!";
+        "Thanks! I’ll get back to you soon.";
 });
