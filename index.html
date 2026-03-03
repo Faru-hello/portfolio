@@ -1,8 +1,8 @@
 
-       <!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Fariha Islam | AI Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -12,7 +12,9 @@
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Fariha<span>.dev</span></div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <button class="menu-toggle" id="menuBtn">☰</button>
+
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -27,7 +29,7 @@
 <header class="hero">
     <h1>Hi, I’m <span>Fariha</span></h1>
     <p>AI Engineer · Machine Learning Developer · Automation Enthusiast</p>
-    <button onclick="scrollToSection('projects')">View My Work</button>
+    <button id="viewWorkBtn">View My Work</button>
 </header>
 
 <!-- ABOUT -->
@@ -88,8 +90,8 @@
 <section id="contact">
     <h2>Contact Me</h2>
     <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
