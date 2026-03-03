@@ -1,188 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: system-ui, sans-serif;
-    background: #0f172a;
-    color: #e5e7eb;
-    line-height: 1.6;
-}
-
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-    background: #020617;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-.logo span {
-    color: #38bdf8;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #94a3b8;
-}
-
-.nav-links a:hover {
-    color: #38bdf8;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    color: #e5e7eb;
-    font-size: 1.5rem;
-    border: none;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-}
-
-.hero span {
-    color: #38bdf8;
-}
-
-.hero button {
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: #38bdf8;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* SECTIONS */
-section {
-    padding: 80px 40px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h2 {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.card, .publication {
-    background: #0b1120;
-    padding: 25px;
-    border-radius: 14px;
-    text-align: center;
-}
-
-/* PROJECTS */
-#project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.project {
-    background: #0b1120;
-    padding: 25px;
-    border-radius: 14px;
-    text-align: left;
-    transition: 0.3s ease;
-}
-
-.project:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
-}
-
-.project h3 {
-    margin-bottom: 10px;
-    color: #38bdf8;
-}
-
-/* BUTTON */
-button {
-    background: #38bdf8;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-/* FORM */
-form {
-    max-width: 420px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-input, textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: none;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    margin-top: 60px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #020617;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 20px;
-        border-radius: 10px;
+const projects = [
+    {
+        title: "Waste Classification System (Capstone Project)",
+        desc: "Developed a deep learning-based waste image classification system using CNN architectures. Built and deployed an interactive Streamlit web application for real-time prediction."
+    },
+    {
+        title: "Explainable ML for Supply Chain Risk Prediction",
+        desc: "Designed a machine learning framework to predict delivery delays and risks. Applied Explainable AI techniques for interpretability. Published in IEEE QPAIN 2025."
     }
+];
 
-    .nav-links.show {
-        display: flex;
-    }
+const projectList = document.getElementById("project-list");
 
-    .menu-toggle {
-        display: block;
-    }
+projects.forEach(p => {
+    const div = document.createElement("div");
+    div.className = "project";
+    div.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p>`;
+    projectList.appendChild(div);
+});
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
+
+document.getElementById("contact-form").addEventListener("submit", e => {
+    e.preventDefault();
+    document.getElementById("form-status").innerText =
+        "Thanks! I’ll get back to you soon.";
+});
