@@ -47,7 +47,6 @@ body {
     color: #38bdf8;
 }
 
-/* MOBILE MENU */
 .menu-toggle {
     display: none;
     background: none;
@@ -98,10 +97,10 @@ h2 {
     gap: 20px;
 }
 
-.card, .project, .publication {
-    background: #020617;
+.card, .publication {
+    background: #0b1120;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 14px;
     text-align: center;
 }
 
@@ -110,6 +109,33 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
+}
+
+.project {
+    background: #0b1120;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* BUTTON */
+button {
+    background: #38bdf8;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 /* FORM */
@@ -127,13 +153,6 @@ input, textarea {
     border: none;
 }
 
-button {
-    background: #38bdf8;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-}
-
 /* FOOTER */
 footer {
     text-align: center;
@@ -142,7 +161,7 @@ footer {
     margin-top: 60px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
